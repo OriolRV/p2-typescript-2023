@@ -1,4 +1,4 @@
-import { User } from "./users.js";
+import { User } from "./pau_users.js";
 
 const head = (title: string) => `
 <head>
@@ -35,21 +35,21 @@ const head = (title: string) => `
 </head>`;
 
 const renderUsers = (users: Array<User>) => {
-  let html = "";
-  for (const user of users) {
-    html += `<div class="user">
+	let html = "";
+	for (const user of users) {
+		html += `<div class="user">
       <img src="${user.picture.medium}" />
       <div class="data">
         <div class="name">${user.fullName}</div>
         <div class="email">${user.email}</div>
       </div>
     </div>`;
-  }
-  return html;
-}
+	}
+	return html;
+};
 
 export const render = (users: Array<User>) => {
-  return `
+	return `
 <html>
   ${head("User List")}
   <body>
