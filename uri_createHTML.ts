@@ -57,7 +57,7 @@ const head = (title: string) => `
         line-height: 3rem;
         font-size: 3rem;
     }
-    .name {
+    .name a {
         font-size: 1.5rem;
     }
     .types, .abilities {
@@ -71,7 +71,8 @@ const obj2html = (Pokemon: Array<Pokemon>) => {
 	for (const monster of Pokemon) {
 		pageCode += `<div class="pokemon">
                 <div class="leftSection">
-                    <div class="name">${monster.name}</div>
+                    <div class="name">
+                    <a href="./${monster.name}.html" target="_blank">${monster.name}</a></div>
                     <div class="id">${monster.id}</div>
                 </div>
                 <div class="middleSection">
@@ -86,7 +87,7 @@ const obj2html = (Pokemon: Array<Pokemon>) => {
 	return pageCode;
 };
 
-export const buildpage = (Pokemon: Array<Pokemon>) => {
+export const buildPage = (Pokemon: Array<Pokemon>) => {
 	return `
     <html>
       ${head("Random Pokedex")}
