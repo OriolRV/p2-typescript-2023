@@ -1,10 +1,15 @@
 /*https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random*/
 //FUNCTION: gets random number between two. The maximum is exclusive and the minimum is inclusive
-function getRandomInt(min: number, max: number) {
+const getRandomInt = (min: number, max: number) => {
 	min = Math.ceil(min);
 	max = Math.floor(max);
 	return Math.floor(Math.random() * (max - min) + min);
-}
+};
+
+//FUNCTION: transforms first letter of word to upper case.
+const capitalizeFirstLetter = (word: string) => {
+	return word.charAt(0).toUpperCase() + word.slice(1);
+};
 
 //API URL
 const apiurl: string = "https://pokeapi.co/api/v2/pokemon/";
@@ -44,11 +49,19 @@ export const getPokemon = async (n: number) => {
 			abilities: any;
 			types: any;
 		} = await response.json();
-		let abilityNames = abilities.map((x: any) => x.ability.name);
-		let typeNames = types.map((y: any) => y.type.name);
-		pokemonNames.push(new Pokemon(name, id, picture, abilityNames, typeNames));
+		let abilityNames = abilities.map((x: any) =>
+			capitalizeFirstLetter(x.ability.name)
+		);
+		let typeNames = types.map((y: any) => capitalizeFirstLetter(y.type.name));
+		pokemonNames.push(
+			new Pokemon(
+				capitalizeFirstLetter(name),
+				id,
+				picture,
+				typeNames,
+				abilityNames
+			)
+		);
 	}
 	return pokemonNames;
 };
-
-getPokemon(1).then((names) => console.log("Pokemon is: ", names));

@@ -5,22 +5,189 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Avore</title>
+  <title>Random Pokedex</title>
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
+      font-family: Georgia, serif;
+    }
+    body {
+        background-color: lightpink;
+    }
+    #centralSquare {
+        padding: 1rem;
+        position: relative;
+        margin: 5rem 5rem;
+        max-height: 75%;
+        background-color: grey;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow-y: scroll;
+    }
+    .pokemon {
+        height: 30%;
+        width: 90%;
+        background-color: lightblue;
+        margin: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: stretch;
+    }
+    .pokemon img {
+        width: 100%;
+    }
+    .leftSection {
+        background-color: yellow;
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .middleSection {
+        background-color: green;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .rightSection {
+        background-color: blue;
+        width: 10%;
+    }
+    .id, .name {
+        font-size: 150%;
     }
   </style>
 </head>
       <body>
-        <div class="pokemon">
-      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/109.png" />
-      <div class="info">
-        <div class="name">koffing</div>
-        <div class="id">109</div>
-        <div class="types">undefined</div>
-        <div class="abilties">undefined</div>
-    </div>
+        <div id=centralSquare>
+            <div class="pokemon">
+                <div class="leftSection">
+                    <div class="name">Dolliv</div>
+                    <div class="id">929</div>
+                </div>
+                <div class="middleSection">
+                    <div class="types">Grass,Normal</div>
+                    <div class="abilties">Early-bird,Harvest</div> 
+                </div>
+                <div class="rightSection">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/929.png" alt=Dolliv/>
+                </div>
+          </div><div class="pokemon">
+                <div class="leftSection">
+                    <div class="name">Castform</div>
+                    <div class="id">351</div>
+                </div>
+                <div class="middleSection">
+                    <div class="types">Normal</div>
+                    <div class="abilties">Forecast</div> 
+                </div>
+                <div class="rightSection">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/351.png" alt=Castform/>
+                </div>
+          </div><div class="pokemon">
+                <div class="leftSection">
+                    <div class="name">Kakuna</div>
+                    <div class="id">14</div>
+                </div>
+                <div class="middleSection">
+                    <div class="types">Bug,Poison</div>
+                    <div class="abilties">Shed-skin</div> 
+                </div>
+                <div class="rightSection">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/14.png" alt=Kakuna/>
+                </div>
+          </div><div class="pokemon">
+                <div class="leftSection">
+                    <div class="name">Shellder</div>
+                    <div class="id">90</div>
+                </div>
+                <div class="middleSection">
+                    <div class="types">Water</div>
+                    <div class="abilties">Shell-armor,Skill-link,Overcoat</div> 
+                </div>
+                <div class="rightSection">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/90.png" alt=Shellder/>
+                </div>
+          </div><div class="pokemon">
+                <div class="leftSection">
+                    <div class="name">Veluza</div>
+                    <div class="id">976</div>
+                </div>
+                <div class="middleSection">
+                    <div class="types">Water,Psychic</div>
+                    <div class="abilties">Mold-breaker,Sharpness</div> 
+                </div>
+                <div class="rightSection">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/976.png" alt=Veluza/>
+                </div>
+          </div><div class="pokemon">
+                <div class="leftSection">
+                    <div class="name">Azurill</div>
+                    <div class="id">298</div>
+                </div>
+                <div class="middleSection">
+                    <div class="types">Normal,Fairy</div>
+                    <div class="abilties">Thick-fat,Huge-power,Sap-sipper</div> 
+                </div>
+                <div class="rightSection">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/298.png" alt=Azurill/>
+                </div>
+          </div><div class="pokemon">
+                <div class="leftSection">
+                    <div class="name">Lileep</div>
+                    <div class="id">345</div>
+                </div>
+                <div class="middleSection">
+                    <div class="types">Rock,Grass</div>
+                    <div class="abilties">Suction-cups,Storm-drain</div> 
+                </div>
+                <div class="rightSection">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/345.png" alt=Lileep/>
+                </div>
+          </div><div class="pokemon">
+                <div class="leftSection">
+                    <div class="name">Glaceon</div>
+                    <div class="id">471</div>
+                </div>
+                <div class="middleSection">
+                    <div class="types">Ice</div>
+                    <div class="abilties">Snow-cloak,Ice-body</div> 
+                </div>
+                <div class="rightSection">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/471.png" alt=Glaceon/>
+                </div>
+          </div><div class="pokemon">
+                <div class="leftSection">
+                    <div class="name">Spearow</div>
+                    <div class="id">21</div>
+                </div>
+                <div class="middleSection">
+                    <div class="types">Normal,Flying</div>
+                    <div class="abilties">Keen-eye,Sniper</div> 
+                </div>
+                <div class="rightSection">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/21.png" alt=Spearow/>
+                </div>
+          </div><div class="pokemon">
+                <div class="leftSection">
+                    <div class="name">Mawile</div>
+                    <div class="id">303</div>
+                </div>
+                <div class="middleSection">
+                    <div class="types">Steel,Fairy</div>
+                    <div class="abilties">Hyper-cutter,Intimidate,Sheer-force</div> 
+                </div>
+                <div class="rightSection">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/303.png" alt=Mawile/>
+                </div>
+          </div>
+        </div>
       </body>
     </html>

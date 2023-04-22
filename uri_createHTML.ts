@@ -1,7 +1,7 @@
 import { Pokemon } from "./uri_pokemons.js";
 
 /*.user {
-      font-family: sans-serif;
+      
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -27,9 +27,61 @@ const head = (title: string) => `
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${title}</title>
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
+      font-family: Georgia, serif;
+    }
+    body {
+        background-color: lightpink;
+    }
+    #centralSquare {
+        padding: 1rem;
+        position: relative;
+        margin: 5rem 5rem;
+        max-height: 75%;
+        background-color: grey;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow-y: scroll;
+    }
+    .pokemon {
+        height: 30%;
+        width: 90%;
+        background-color: lightblue;
+        margin: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: stretch;
+    }
+    .pokemon img {
+        width: 100%;
+    }
+    .leftSection {
+        background-color: yellow;
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .middleSection {
+        background-color: green;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .rightSection {
+        background-color: blue;
+        width: 10%;
+    }
+    .id, .name {
+        font-size: 150%;
     }
   </style>
 </head>`;
@@ -38,13 +90,18 @@ const obj2html = (Pokemon: Array<Pokemon>) => {
 	let pageCode = "";
 	for (const monster of Pokemon) {
 		pageCode += `<div class="pokemon">
-      <img src="${monster.picture}" />
-      <div class="info">
-        <div class="name">${monster.name}</div>
-        <div class="id">${monster.id}</div>
-        <div class="types">${monster.typeNames}</div>
-        <div class="abilties">${monster.abilityNames}</div>
-    </div>`;
+                <div class="leftSection">
+                    <div class="name">${monster.name}</div>
+                    <div class="id">${monster.id}</div>
+                </div>
+                <div class="middleSection">
+                    <div class="types">${monster.types}</div>
+                    <div class="abilties">${monster.abilities}</div> 
+                </div>
+                <div class="rightSection">
+                    <img src="${monster.picture}" alt=${monster.name}/>
+                </div>
+          </div>`;
 	}
 	return pageCode;
 };
@@ -52,9 +109,11 @@ const obj2html = (Pokemon: Array<Pokemon>) => {
 export const buildpage = (Pokemon: Array<Pokemon>) => {
 	return `
     <html>
-      ${head("Avore")}
+      ${head("Random Pokedex")}
       <body>
-        ${obj2html(Pokemon)}
+        <div id=centralSquare>
+            ${obj2html(Pokemon)}
+        </div>
       </body>
     </html>`;
 };
