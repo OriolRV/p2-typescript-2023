@@ -1,25 +1,5 @@
 import { Pokemon } from "./uri_pokemons.js";
 
-/*.user {
-      
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      padding: .4rem;
-      border-bottom: 1px solid #ddd;
-    }
-    .user img {
-      width: 3rem;
-      height: 3rem;
-      border-radius: 50%;
-      margin-right: 0.7rem;
-    }
-    .user .name {
-      font-weight: bold;
-    }
-    .user .email {
-      font-family: monospace;*/
-
 const head = (title: string) => `
 <head>
   <meta charset="UTF-8">
@@ -33,55 +13,55 @@ const head = (title: string) => `
       font-family: Georgia, serif;
     }
     body {
-        background-color: lightpink;
+        background-color: lightgreen;
     }
     #centralSquare {
-        padding: 1rem;
-        position: relative;
         margin: 5rem 5rem;
-        max-height: 75%;
-        background-color: grey;
+        background-color: lightblue;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        overflow-y: scroll;
     }
     .pokemon {
-        height: 30%;
         width: 90%;
-        background-color: lightblue;
+        background-color: white;
         margin: 1rem;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         align-items: stretch;
+        border-radius: 5%;
     }
     .pokemon img {
         width: 100%;
     }
     .leftSection {
-        background-color: yellow;
         width: 20%;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: flex-start;
     }
     .middleSection {
-        background-color: green;
         width: 50%;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
     }
     .rightSection {
-        background-color: blue;
-        width: 10%;
+        width: 15%;
     }
-    .id, .name {
-        font-size: 150%;
+    .id {
+        line-height: 3rem;
+        font-size: 3rem;
+    }
+    .name {
+        font-size: 1.5rem;
+    }
+    .types, .abilities {
+        justify-content: space-between;
     }
   </style>
 </head>`;
@@ -99,7 +79,7 @@ const obj2html = (Pokemon: Array<Pokemon>) => {
                     <div class="abilties">${monster.abilities}</div> 
                 </div>
                 <div class="rightSection">
-                    <img src="${monster.picture}" alt=${monster.name}/>
+                    <img src="${monster.picture}" alt="${monster.name}"/>
                 </div>
           </div>`;
 	}

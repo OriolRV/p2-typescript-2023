@@ -29,7 +29,7 @@ export class Pokemon {
 export const getPokemon = async (n: number) => {
 	let pokemonNames = [];
 	for (let i = 0; i < n; i++) {
-		let pokemonIndex: number = getRandomInt(1, 1000);
+		let pokemonIndex: number = getRandomInt(1, 1010);
 		let response = await fetch(`${apiurl}${pokemonIndex}`);
 		let {
 			name,
@@ -58,8 +58,8 @@ export const getPokemon = async (n: number) => {
 				capitalizeFirstLetter(name),
 				id,
 				picture,
-				typeNames,
-				abilityNames
+				typeNames.join(" "),
+				abilityNames.join(" ")
 			)
 		);
 	}
