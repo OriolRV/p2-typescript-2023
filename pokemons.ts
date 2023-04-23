@@ -48,7 +48,7 @@ export const getPokemon = async (n: number) => {
 		}: {
 			name: string;
 			id: number;
-			sprites: string;
+			sprites: any;
 			other: any;
 			abilities: any;
 			types: any;

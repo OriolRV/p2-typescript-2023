@@ -43,7 +43,7 @@ export const buildIndividualPage = (Pokemon: Pokemon) => {
                     <div class="stats">
                         <h2>Base stats<h2>
                         <canvas id="stats">
-                    </div>;
+                    </div>
                     
                     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
                     <script>
@@ -69,7 +69,7 @@ export const buildIndividualPage = (Pokemon: Pokemon) => {
                                 }
                             }
                         }
-                    });
+                    })
                     </script>
                 </div>
             </div>

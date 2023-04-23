@@ -3,7 +3,7 @@ import { buildPage } from "./createHTML.js";
 import { buildIndividualPage } from "./createIndividualHTML.js";
 import { getPokemon } from "./pokemons.js";
 
-const PokemonObj = await getPokemon(1);
+const PokemonObj = await getPokemon(100);
 const PokemonHtml = buildPage(PokemonObj);
 await writeFile("pokemon.html", PokemonHtml);
 
