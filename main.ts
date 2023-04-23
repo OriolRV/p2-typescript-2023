@@ -1,7 +1,7 @@
 import { writeFile } from "fs/promises";
-import { buildPage } from "./uri_createHTML.js";
-import { buildIndividualPage } from "./uri_createIndividualHTML.js";
-import { getPokemon } from "./uri_pokemons.js";
+import { buildPage } from "./createHTML.js";
+import { buildIndividualPage } from "./createIndividualHTML.js";
+import { getPokemon } from "./pokemons.js";
 
 const PokemonObj = await getPokemon(1);
 const PokemonHtml = buildPage(PokemonObj);
