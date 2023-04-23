@@ -1,0 +1,39 @@
+
+    <html>
+        <head>
+        <title>Maushold</title>
+        </head>
+        <body>
+            <div class="leftSection">
+                <div class="name">
+                    <a href="./Maushold.html" target="_blank">Maushold</a></div>
+                    <div class="id">925</div>
+            </div>
+            <div class="middleSection">
+                <div class="types">Normal</div>
+                <div class="abilties">Friend-guard Cheek-pouch Technician</div> 
+            </div>
+            <div class="rightSection">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/925.png" alt="Maushold"/>
+            </div>
+            <div class="moves"><ul><li>Take-down</li><li>Hyper-beam</li><li>Low-kick</li><li>Thunder-wave</li><li>Dig</li><li>Agility</li><li>Swift</li><li>Rest</li><li>Super-fang</li><li>Substitute</li><li>Thief</li><li>Protect</li><li>Mud-slap</li><li>Endure</li><li>Charm</li><li>Sleep-talk</li><li>Encore</li><li>Rain-dance</li><li>Sunny-day</li><li>Crunch</li><li>Beat-up</li><li>Facade</li><li>Follow-me</li><li>Taunt</li><li>Helping-hand</li><li>Hyper-voice</li><li>Fake-tears</li><li>Bullet-seed</li><li>Aerial-ace</li><li>Mud-shot</li><li>Water-pulse</li><li>U-turn</li><li>Copycat</li><li>Seed-bomb</li><li>Giga-impact</li><li>Shadow-claw</li><li>Grass-knot</li><li>Double-hit</li><li>Low-sweep</li><li>Echoed-voice</li><li>Play-rough</li><li>Baby-doll-eyes</li><li>Tera-blast</li><li>Population-bomb</li><li>Pound</li><li>Tidy-up</li><li>Trailblaze</li><li>Chilling-water</li></ul></div>
+            <div><canvas id="stats"></div>;
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script>
+            const ctx = document.getElementById('stats');
+            new Chart(ctx, {
+                type: "radar",
+                data: {
+                    labels: ["HP", "Attack", "Defense", "Sp. Attack", "Sp. Defense", "Speed"],
+                    datasets: [{
+                        label: "Maushold's base stats",
+                        data: [74,75,70,65,75,111],
+                        fill: true,
+                    backgroundColor: "rgba(255, 99, 132, 0.2)",
+                    borderColor: "rgb(255, 99, 132)",
+                    pointBackgroundColor: "rgb(255, 99, 132)",
+                    pointBorderColor: "#fff"
+                }]}});
+            </script>
+      </body>
+    </html>

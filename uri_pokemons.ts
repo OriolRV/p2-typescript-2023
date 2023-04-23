@@ -21,7 +21,9 @@ export class Pokemon {
 		public id: number,
 		public picture: string,
 		public types: Array<string>,
-		public abilities: Array<string>
+		public abilities: Array<string>,
+		public moves: Array<string>,
+		public stats: Array<string>
 	) {}
 }
 
@@ -41,6 +43,8 @@ export const getPokemon = async (n: number) => {
 			},
 			abilities,
 			types,
+			moves,
+			stats,
 		}: {
 			name: string;
 			id: number;
@@ -48,18 +52,24 @@ export const getPokemon = async (n: number) => {
 			other: any;
 			abilities: any;
 			types: any;
+			moves: any;
+			stats: any;
 		} = await response.json();
 		let abilityNames = abilities.map((x: any) =>
 			capitalizeFirstLetter(x.ability.name)
 		);
-		let typeNames = types.map((y: any) => capitalizeFirstLetter(y.type.name));
+		let typeNames = types.map((x: any) => capitalizeFirstLetter(x.type.name));
+		let movesNames = moves.map((x: any) => capitalizeFirstLetter(x.move.name));
+		let statsNumbers = stats.map((x: any) => x.base_stat);
 		pokemonNames.push(
 			new Pokemon(
 				capitalizeFirstLetter(name),
 				id,
 				picture,
 				typeNames.join(" "),
-				abilityNames.join(" ")
+				abilityNames.join(" "),
+				movesNames,
+				statsNumbers
 			)
 		);
 	}

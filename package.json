@@ -4,5 +4,8 @@
   "type": "module",
   "devDependencies": {
     "bun-types": "^0.5.8"
+  },
+  "dependencies": {
+    "chart.js": "^4.2.1"
   }
 }

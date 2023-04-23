@@ -1,0 +1,46 @@
+
+    <html>
+        <head>
+        <title>Porygon2</title>
+        </head>
+        <body>
+            <div class="leftSection">
+                <div class="name">
+                    <a href="./Porygon2.html" target="_blank">Porygon2</a></div>
+                    <div class="id">233</div>
+            </div>
+            <div class="middleSection">
+                <div class="types">Normal</div>
+                <div class="abilties">Trace Download Analytic</div> 
+            </div>
+            <div class="rightSection">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/233.png" alt="Porygon2"/>
+            </div>
+            <div class="moves"><ul><li>Tackle</li><li>Double-edge</li><li>Ice-beam</li><li>Blizzard</li><li>Psybeam</li><li>Hyper-beam</li><li>Solar-beam</li><li>Thunder-shock</li><li>Thunderbolt</li><li>Thunder-wave</li><li>Thunder</li><li>Toxic</li><li>Psychic</li><li>Agility</li><li>Mimic</li><li>Double-team</li><li>Recover</li><li>Defense-curl</li><li>Swift</li><li>Dream-eater</li><li>Flash</li><li>Rest</li><li>Conversion</li><li>Tri-attack</li><li>Substitute</li><li>Thief</li><li>Nightmare</li><li>Snore</li><li>Curse</li><li>Conversion-2</li><li>Protect</li><li>Zap-cannon</li><li>Icy-wind</li><li>Lock-on</li><li>Endure</li><li>Swagger</li><li>Sleep-talk</li><li>Return</li><li>Frustration</li><li>Pain-split</li><li>Iron-tail</li><li>Hidden-power</li><li>Rain-dance</li><li>Sunny-day</li><li>Psych-up</li><li>Shadow-ball</li><li>Facade</li><li>Trick</li><li>Magic-coat</li><li>Recycle</li><li>Secret-power</li><li>Signal-beam</li><li>Aerial-ace</li><li>Shock-wave</li><li>Gravity</li><li>Natural-gift</li><li>Power-swap</li><li>Guard-swap</li><li>Last-resort</li><li>Magnet-rise</li><li>Giga-impact</li><li>Zen-headbutt</li><li>Trick-room</li><li>Discharge</li><li>Charge-beam</li><li>Wonder-room</li><li>Psyshock</li><li>Telekinesis</li><li>Foul-play</li><li>Round</li><li>Ally-switch</li><li>Electroweb</li><li>Confide</li><li>Eerie-impulse</li><li>Speed-swap</li></ul></div>
+            <div><canvas id="stats"></div>;
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script>
+            const ctx = document.getElementById('stats');
+            new Chart(ctx, {
+                type: "radar",
+                data: {
+                    labels: ["HP", "Attack", "Defense", "Sp. Attack", "Sp. Defense", "Speed"],
+                    datasets: [{
+                        label: "Porygon2's base stats",
+                        data: "85,80,90,105,95,60",
+                        fill: true,
+                    backgroundColor: "rgba(255, 99, 132, 0.2)",
+                    borderColor: "rgb(255, 99, 132)",
+                    pointBackgroundColor: "rgb(255, 99, 132)",
+                    pointBorderColor: "#fff"
+                    }]
+                },
+                options = {
+                    scales: {
+                        r: {beginAtZero: true}
+                    }
+                }
+            });
+            </script>
+      </body>
+    </html>

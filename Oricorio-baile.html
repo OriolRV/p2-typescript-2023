@@ -1,0 +1,48 @@
+
+    <html>
+        <head>
+        <title>Oricorio-baile</title>
+        </head>
+        <body>
+            <div class="leftSection">
+                <div class="name">
+                    <a href="./Oricorio-baile.html" target="_blank">Oricorio-baile</a></div>
+                    <div class="id">741</div>
+            </div>
+            <div class="middleSection">
+                <div class="types">Fire Flying</div>
+                <div class="abilties">Dancer</div> 
+            </div>
+            <div class="rightSection">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/741.png" alt="Oricorio-baile"/>
+            </div>
+            <div class="moves"><ul><li>Pound</li><li>Double-slap</li><li>Swords-dance</li><li>Fly</li><li>Take-down</li><li>Growl</li><li>Peck</li><li>Toxic</li><li>Agility</li><li>Double-team</li><li>Mirror-move</li><li>Swift</li><li>Sky-attack</li><li>Rest</li><li>Substitute</li><li>Snore</li><li>Reversal</li><li>Protect</li><li>Icy-wind</li><li>Sandstorm</li><li>Endure</li><li>Charm</li><li>Swagger</li><li>Steel-wing</li><li>Attract</li><li>Sleep-talk</li><li>Return</li><li>Frustration</li><li>Safeguard</li><li>Baton-pass</li><li>Hidden-power</li><li>Rain-dance</li><li>Sunny-day</li><li>Flatter</li><li>Facade</li><li>Taunt</li><li>Helping-hand</li><li>Role-play</li><li>Feather-dance</li><li>Teeter-dance</li><li>Air-cutter</li><li>Aerial-ace</li><li>Covet</li><li>Calm-mind</li><li>Roost</li><li>Pluck</li><li>Tailwind</li><li>U-turn</li><li>Embargo</li><li>Air-slash</li><li>Defog</li><li>Captivate</li><li>Quiver-dance</li><li>Round</li><li>Quash</li><li>Acrobatics</li><li>Work-up</li><li>Hurricane</li><li>Confide</li><li>Revelation-dance</li><li>Tera-blast</li><li>Pound</li><li>Trailblaze</li></ul></div>
+            <div><canvas id="stats"></div>;
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script>
+            const ctx = document.getElementById('stats');
+            new Chart(ctx, {
+                type: "radar",
+                data: {
+                    labels: ["HP", "Attack", "Defense", "Sp. Attack", "Sp. Defense", "Speed"],
+                    datasets: [{
+                        label: "Oricorio-baile's base stats",
+                        data: "75,70,70,98,70,93",
+                        fill: true,
+                    backgroundColor: "rgba(255, 99, 132, 0.2)",
+                    borderColor: "rgb(255, 99, 132)",
+                    pointBackgroundColor: "rgb(255, 99, 132)",
+                    pointBorderColor: "#fff"
+                    }]
+                },
+                options: {
+                    scales: {
+                        r: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+            </script>
+      </body>
+    </html>

@@ -1,0 +1,46 @@
+
+    <html>
+        <head>
+        <title>Trumbeak</title>
+        </head>
+        <body>
+            <div class="leftSection">
+                <div class="name">
+                    <a href="./Trumbeak.html" target="_blank">Trumbeak</a></div>
+                    <div class="id">732</div>
+            </div>
+            <div class="middleSection">
+                <div class="types">Normal Flying</div>
+                <div class="abilties">Keen-eye Skill-link Pickup</div> 
+            </div>
+            <div class="rightSection">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/732.png" alt="Trumbeak"/>
+            </div>
+            <div class="moves"><ul><li>Swords-dance</li><li>Fly</li><li>Fury-attack</li><li>Growl</li><li>Supersonic</li><li>Peck</li><li>Drill-peck</li><li>Toxic</li><li>Screech</li><li>Double-team</li><li>Sky-attack</li><li>Rest</li><li>Substitute</li><li>Thief</li><li>Snore</li><li>Protect</li><li>Swagger</li><li>Steel-wing</li><li>Attract</li><li>Sleep-talk</li><li>Return</li><li>Frustration</li><li>Hidden-power</li><li>Sunny-day</li><li>Rock-smash</li><li>Uproar</li><li>Heat-wave</li><li>Brick-break</li><li>Knock-off</li><li>Feather-dance</li><li>Hyper-voice</li><li>Bullet-seed</li><li>Aerial-ace</li><li>Rock-blast</li><li>Roost</li><li>Pluck</li><li>Tailwind</li><li>U-turn</li><li>Defog</li><li>Gunk-shot</li><li>Smack-down</li><li>Flame-charge</li><li>Round</li><li>Echoed-voice</li><li>Work-up</li><li>Confide</li></ul></div>
+            <div><canvas id="stats"></div>;
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script>
+            const ctx = document.getElementById('stats');
+            new Chart(ctx, {
+                type: "radar",
+                data: {
+                    labels: ["HP", "Attack", "Defense", "Sp. Attack", "Sp. Defense", "Speed"],
+                    datasets: [{
+                        label: "Trumbeak's base stats",
+                        data: "55,85,50,40,50,75",
+                        fill: true,
+                    backgroundColor: "rgba(255, 99, 132, 0.2)",
+                    borderColor: "rgb(255, 99, 132)",
+                    pointBackgroundColor: "rgb(255, 99, 132)",
+                    pointBorderColor: "#fff"
+                    }]
+                },
+                options = {
+                    scales: {
+                        r: {beginAtZero: true}
+                    }
+                }
+            });
+            </script>
+      </body>
+    </html>

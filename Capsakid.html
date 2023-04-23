@@ -1,0 +1,48 @@
+
+    <html>
+        <head>
+        <title>Capsakid</title>
+        </head>
+        <body>
+            <div class="leftSection">
+                <div class="name">
+                    <a href="./Capsakid.html" target="_blank">Capsakid</a></div>
+                    <div class="id">951</div>
+            </div>
+            <div class="middleSection">
+                <div class="types">Grass</div>
+                <div class="abilties">Chlorophyll Insomnia Klutz</div> 
+            </div>
+            <div class="rightSection">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/951.png" alt="Capsakid"/>
+            </div>
+            <div class="moves"><ul><li>Headbutt</li><li>Take-down</li><li>Leer</li><li>Bite</li><li>Leech-seed</li><li>Growth</li><li>Razor-leaf</li><li>Solar-beam</li><li>Rest</li><li>Substitute</li><li>Thief</li><li>Protect</li><li>Sandstorm</li><li>Giga-drain</li><li>Endure</li><li>Rollout</li><li>Sleep-talk</li><li>Sunny-day</li><li>Crunch</li><li>Facade</li><li>Helping-hand</li><li>Ingrain</li><li>Bullet-seed</li><li>Magical-leaf</li><li>Worry-seed</li><li>Seed-bomb</li><li>Energy-ball</li><li>Zen-headbutt</li><li>Leaf-storm</li><li>Grass-knot</li><li>Rage-powder</li><li>Grassy-terrain</li><li>Leafage</li><li>Stomping-tantrum</li><li>Tera-blast</li><li>Trailblaze</li></ul></div>
+            <div><canvas id="stats"></div>;
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script>
+            const ctx = document.getElementById('stats');
+            new Chart(ctx, {
+                type: "radar",
+                data: {
+                    labels: ["HP", "Attack", "Defense", "Sp. Attack", "Sp. Defense", "Speed"],
+                    datasets: [{
+                        label: "Capsakid's base stats",
+                        data: "50,62,40,62,40,50",
+                        fill: true,
+                    backgroundColor: "rgba(255, 99, 132, 0.2)",
+                    borderColor: "rgb(255, 99, 132)",
+                    pointBackgroundColor: "rgb(255, 99, 132)",
+                    pointBorderColor: "#fff"
+                    }]
+                },
+                options : {
+                    scales: {
+                        r: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+            </script>
+      </body>
+    </html>

@@ -1,0 +1,48 @@
+
+    <html>
+        <head>
+        <title>Weepinbell</title>
+        </head>
+        <body>
+            <div class="leftSection">
+                <div class="name">
+                    <a href="./Weepinbell.html" target="_blank">Weepinbell</a></div>
+                    <div class="id">70</div>
+            </div>
+            <div class="middleSection">
+                <div class="types">Grass Poison</div>
+                <div class="abilties">Chlorophyll Gluttony</div> 
+            </div>
+            <div class="rightSection">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/70.png" alt="Weepinbell"/>
+            </div>
+            <div class="moves"><ul><li>Swords-dance</li><li>Cut</li><li>Bind</li><li>Slam</li><li>Vine-whip</li><li>Headbutt</li><li>Wrap</li><li>Take-down</li><li>Double-edge</li><li>Acid</li><li>Mega-drain</li><li>Growth</li><li>Razor-leaf</li><li>Solar-beam</li><li>Poison-powder</li><li>Stun-spore</li><li>Sleep-powder</li><li>Toxic</li><li>Rage</li><li>Mimic</li><li>Double-team</li><li>Reflect</li><li>Bide</li><li>Flash</li><li>Rest</li><li>Substitute</li><li>Thief</li><li>Snore</li><li>Curse</li><li>Protect</li><li>Sludge-bomb</li><li>Giga-drain</li><li>Endure</li><li>Swagger</li><li>Attract</li><li>Sleep-talk</li><li>Return</li><li>Frustration</li><li>Sweet-scent</li><li>Synthesis</li><li>Hidden-power</li><li>Sunny-day</li><li>Facade</li><li>Nature-power</li><li>Knock-off</li><li>Secret-power</li><li>Bullet-seed</li><li>Natural-gift</li><li>Wring-out</li><li>Gastro-acid</li><li>Worry-seed</li><li>Sucker-punch</li><li>Poison-jab</li><li>Seed-bomb</li><li>Energy-ball</li><li>Captivate</li><li>Grass-knot</li><li>Bug-bite</li><li>Venoshock</li><li>Round</li><li>Confide</li><li>Infestation</li></ul></div>
+            <div><canvas id="stats"></div>;
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script>
+            const ctx = document.getElementById('stats');
+            new Chart(ctx, {
+                type: "radar",
+                data: {
+                    labels: ["HP", "Attack", "Defense", "Sp. Attack", "Sp. Defense", "Speed"],
+                    datasets: [{
+                        label: "Weepinbell's base stats",
+                        data: [65,90,50,85,45,55],
+                        fill: true,
+                    backgroundColor: "rgba(255, 99, 132, 0.2)",
+                    borderColor: "rgb(255, 99, 132)",
+                    pointBackgroundColor: "rgb(255, 99, 132)",
+                    pointBorderColor: "#fff"
+                    }]
+                },
+                options: {
+                    scales: {
+                        r: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+            </script>
+      </body>
+    </html>

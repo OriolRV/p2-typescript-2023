@@ -1,34 +1,22 @@
-import { Pokemon } from "./uri_pokemons.js";
 
-//https://www.chartjs.org/docs/latest/charts/radar.html
-export const buildIndividualPage = (Pokemon: Pokemon) => {
-	let moveList = "";
-	for (let i = 0; i < Pokemon.moves.length; i++) {
-		moveList += `<li>${Pokemon.moves[i]}</li>`;
-	}
-	console.log(Pokemon.stats);
-
-	return `
     <html>
         <head>
-        <title>${Pokemon.name}</title>
+        <title>Cosmog</title>
         </head>
         <body>
             <div class="leftSection">
                 <div class="name">
-                    <a href="./${Pokemon.name}.html" target="_blank">${
-		Pokemon.name
-	}</a></div>
-                    <div class="id">${Pokemon.id}</div>
+                    <a href="./Cosmog.html" target="_blank">Cosmog</a></div>
+                    <div class="id">789</div>
             </div>
             <div class="middleSection">
-                <div class="types">${Pokemon.types}</div>
-                <div class="abilties">${Pokemon.abilities}</div> 
+                <div class="types">Psychic</div>
+                <div class="abilties">Unaware</div> 
             </div>
             <div class="rightSection">
-                <img src="${Pokemon.picture}" alt="${Pokemon.name}"/>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/789.png" alt="Cosmog"/>
             </div>
-            <div class="moves"><ul>${moveList}</ul></div>
+            <div class="moves"><ul><li>Teleport</li><li>Splash</li></ul></div>
             <div><canvas id="stats"></div>;
             <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
             <script>
@@ -38,8 +26,8 @@ export const buildIndividualPage = (Pokemon: Pokemon) => {
                 data: {
                     labels: ["HP", "Attack", "Defense", "Sp. Attack", "Sp. Defense", "Speed"],
                     datasets: [{
-                        label: "${Pokemon.name}'s base stats",
-                        data: ${JSON.stringify(Pokemon.stats)},
+                        label: "Cosmog's base stats",
+                        data: [43,29,31,29,31,37],
                         fill: true,
                     backgroundColor: "rgba(255, 99, 132, 0.2)",
                     borderColor: "rgb(255, 99, 132)",
@@ -49,13 +37,10 @@ export const buildIndividualPage = (Pokemon: Pokemon) => {
                 },
                 options: {
                     scales: {
-                        r: {
-                            beginAtZero: true
-                        }
+                        r: {beginAtZero: true}
                     }
                 }
             });
             </script>
       </body>
-    </html>`;
-};
+    </html>
